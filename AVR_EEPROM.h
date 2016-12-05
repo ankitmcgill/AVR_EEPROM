@@ -1,0 +1,14 @@
+//////////////////////////////////////////////
+// AVR EEPROM WRAPPER LIBRARY
+//
+// DECEMBER 5, 2016
+//
+// ANKIT BHATNAGAR
+// ANKIT.BHATNAGARINDIA@GMAIL.COM
+//
+//////////////////////////////////////////////
+
+#ifndef _AVR_EEPROM_H_
+#define _AVR_EEPROM_H_
+
+#endif
