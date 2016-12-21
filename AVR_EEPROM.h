@@ -16,14 +16,18 @@
 
 #include <avr/eeprom.h>
 #include <stdio.h>
+#include <avr/io.h>
 
-uint8_t AVR_EEPROM_read_byte(uint8_t* addr);
-void AVR_EEPROM_write_byte(uint8_t* addr, uint8_t val);
+uint8_t AVR_EEPROM_Read8(uint8_t* addr);
+void AVR_EEPROM_Write8(uint8_t* addr, uint8_t val);
 
-uint16_t AVR_EEPROM_read_word(uint16_t* addr);
-void AVR_EEPROM_write_word(uint16_t* addr, uint16_t val);
+uint16_t AVR_EEPROM_Read16(uint16_t* addr);
+void AVR_EEPROM_Write16(uint16_t* addr, uint16_t val);
 
-void AVR_EEPROM_read_block(void* pointer_eeprom, void* pointer_ram, size_t n);
-void AVR_EEPROM_write_block(void* pointer_ram, void* pointer_eeprom, size_t n);
+uint32_t AVR_EEPROM_Read32(uint32_t* addr);
+void AVR_EEPROM_Write32(uint32_t* addr, uint32_t val);
+
+void AVR_EEPROM_Read_Block(const void* pointer_eeprom, void* pointer_ram, uint16_t size);
+void AVR_EEPROM_Write_Block(const void* pointer_ram, void* pointer_eeprom, uint16_t size);
 
 #endif
