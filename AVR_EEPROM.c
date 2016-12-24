@@ -16,7 +16,6 @@
 
 #include "AVR_EEPROM.h"
 
-
 uint8_t AVR_EEPROM_Read8(uint8_t* addr)
 {
 	//READ 8 BITS FROM THE SPECIFIED EEPROM ADDRESS
@@ -52,7 +51,7 @@ uint32_t AVR_EEPROM_Read32(uint32_t* addr)
 	return eeprom_read_dword(addr);
 }
 
-void AVR_EEPROM_Write32(uint32	_t* addr, uint32_t val)
+void AVR_EEPROM_Write32(uint32_t* addr, uint32_t val)
 {
 	//WRITE 32 BITS TO THE SPECIFIED EEPROM ADDRESS
 	
@@ -69,7 +68,7 @@ void AVR_EEPROM_Read_Block(const void* pointer_eeprom, void* pointer_ram, uint16
 
 void AVR_EEPROM_Write_Block(const void* pointer_ram, void* pointer_eeprom, uint16_t size)
 {
-	//WRITE THE SPECIFIED RAM BLOCK OF SPECIFIED SIZE IN THE SPECIFIED EEPROM\
+	//WRITE THE SPECIFIED RAM BLOCK OF SPECIFIED SIZE IN THE SPECIFIED EEPROM
 	//ADDRESS
 	
 	eeprom_update_block(pointer_ram, pointer_eeprom, size);

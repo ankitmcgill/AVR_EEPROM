@@ -11,12 +11,12 @@
 //
 //////////////////////////////////////////////
 
-#ifndef _AVR_EEPROM_H_
-#define _AVR_EEPROM_H_
+#ifndef _AVR_EEPROM_LIB_H_
+#define _AVR_EEPROM_LIB_H_
 
-#include <avr/eeprom.h>
 #include <stdio.h>
 #include <avr/io.h>
+#include <avr/eeprom.h>
 
 uint8_t AVR_EEPROM_Read8(uint8_t* addr);
 void AVR_EEPROM_Write8(uint8_t* addr, uint8_t val);
